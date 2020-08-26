@@ -5,14 +5,14 @@ require './lib/house'
 
 class RoomTest < Minitest::Test
   def test_it_exists
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     assert_instance_of House, house
   end
 
   def test_attributes
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     assert_equal 400000, house.price
@@ -21,7 +21,7 @@ class RoomTest < Minitest::Test
   end
 
   def test_adding_rooms
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     room_1 = Room.new(:bedroom, 10, '13')

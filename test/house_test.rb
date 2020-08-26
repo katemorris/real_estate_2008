@@ -32,8 +32,8 @@ class RoomTest < Minitest::Test
     assert_equal [room_1, room_2], house.rooms
   end
 
-  def test_it_exists
-    skip
+  def test_house_is_above_average
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     assert_equal false, house.above_market_average?
@@ -74,7 +74,8 @@ class RoomTest < Minitest::Test
     skip
     house = House.new("$400000", "123 sugar lane")
 
-    assert_equal {"price" => 400000, "address" => "123 sugar lane"}, house.details
+    house_details_static = {"price" => 400000, "address" => "123 sugar lane"}
+    assert_equal house_details_static, house.details
   end
 
 end

@@ -21,25 +21,14 @@ class RoomTest < Minitest::Test
     assert_equal 130, room1.area
     assert_equal 180, room2.area
   end
+
+  def test_it_is_painted
+    room = Room.new(:bedroom, 10, "13")
+
+    assert_equal :bedroom, room.category
+    assert_equal 130, room.area
+    assert_equal false, room.is_painted?
+    room.paint
+    assert room.is_painted?
+  end
 end
-
-
-# pry(main)> require './lib/room'
-# #=> true
-#
-# pry(main)> room = Room.new(:bedroom, 10, "13")
-# #=> #<Room:0x00007fa53b9ca0a8 @category=:bedroom, @length=10, @width="13">
-#
-# pry(main)> room.category
-# #=> :bedroom
-#
-# pry(main)> room.area
-# #=> 130
-#
-# pry(main)> room.is_painted?
-# #=> false
-#
-# pry(main)> room.paint
-#
-# pry(main)> room.is_painted?
-# #=> true

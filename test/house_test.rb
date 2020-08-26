@@ -71,7 +71,7 @@ class RoomTest < Minitest::Test
   end
 
   def test_house_has_details
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     house_details_static = {"price" => 400000, "address" => "123 sugar lane"}

@@ -29,4 +29,8 @@ class House
     house_details["address"] = @address
     return house_details
   end
+
+  def price_per_square_foot
+    (@price.to_f / self.area.to_f).round(2)
+  end
 end

@@ -22,4 +22,11 @@ class House
   def area
     @rooms.reduce(0) { |total, room| total + room.area }
   end
+
+  def details
+    house_details = Hash.new
+    house_details["price"] = @price
+    house_details["address"] = @address
+    return house_details
+  end
 end

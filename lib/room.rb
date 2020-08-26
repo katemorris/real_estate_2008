@@ -4,10 +4,10 @@ class Room
   def initialize(category, length, width)
     @category = category
     @length = length
-    @width = width.to_i
+    @width = width
   end
 
   def area
-    @length * @width
+    @length * @width.to_i
   end
 end
